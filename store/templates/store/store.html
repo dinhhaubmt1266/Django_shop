@@ -1,0 +1,88 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="row">
+    	{% for product in products %}
+    	<div class="col-lg-4">
+    		<img alt={{product.name}} class="thumbnail" src="{{product.imageURL}}">
+			<div class="box-element product">
+				<h6><strong>{{product.name}}</strong></h6>
+    			<hr>
+    			<button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
+    			<a class="btn btn-outline-success" href="#">View</a>
+    			<h4 style="display: inline-block; float: right;">${{product.price|floatformat:2}}</h4>
+			</div>
+    	</div>
+    	{% endfor %}
+
+    </div>
+{% endblock content %}
+
+<!-- <div class="col-lg-4">
+    		<img class="thumbnail" src="{% static 'images/barca.png' %}">
+    		<div class="box-element product">
+    			<h6><strong>Barcelona</strong></h6>
+    			<hr>
+
+    			<button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+    			<a class="btn btn-outline-success" href="#">View</a>
+    			<h4 style="display: inline-block; float: right;"><strong>$20</strong></h4>
+    		</div>
+    	</div>
+    	<div class="col-lg-4">
+    		<img class="thumbnail" src="{% static 'images/real.png' %}">
+			<div class="box-element product">
+				<h6><strong>Real Madrid</strong></h6>
+    			<hr>
+    			<button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+    			<a class="btn btn-outline-success" href="#">View</a>
+    			<h4 style="display: inline-block; float: right;"><strong>$20</strong></h4>
+				
+			</div>
+    	</div>
+    	<div class="col-lg-4">
+    		<img class="thumbnail" src="{% static 'images/atlentico.png' %}">
+			<div class="box-element product">
+				<h6><strong>Atlentico Madrid</strong></h6>
+    			<hr>
+    			<button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+    			<a class="btn btn-outline-success" href="#">View</a>
+    			<h4 style="display: inline-block; float: right;"><strong>$20</strong></h4>
+
+			</div>
+    	</div>
+
+    	<div class="col-lg-4">
+    		<img class="thumbnail" src="{% static 'images/mancity.png' %}">
+    		<div class="box-element product">
+    			<h6><strong>Manchester City</strong></h6>
+    			<hr>
+
+    			<button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+    			<a class="btn btn-outline-success" href="#">View</a>
+    			<h4 style="display: inline-block; float: right;"><strong>$20</strong></h4>
+    		</div>
+    	</div>
+    	<div class="col-lg-4">
+    		<img class="thumbnail" src="{% static 'images/manunited.png' %}">
+			<div class="box-element product">
+				<h6><strong>Manchester United</strong></h6>
+    			<hr>
+    			<button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+    			<a class="btn btn-outline-success" href="#">View</a>
+    			<h4 style="display: inline-block; float: right;"><strong>$20</strong></h4>
+				
+			</div>
+    	</div>
+    	<div class="col-lg-4">
+    		<img class="thumbnail" src="{% static 'images/chelsea.png' %}">
+			<div class="box-element product">
+				<h6><strong>Chelsea</strong></h6>
+    			<hr>
+    			<button class="btn btn-outline-secondary add-btn">Add to Cart</button>
+    			<a class="btn btn-outline-success" href="#">View</a>
+    			<h4 style="display: inline-block; float: right;"><strong>$20</strong></h4>
+
+			</div>
+    	</div>
+ -->
